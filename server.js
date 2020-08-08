@@ -1,10 +1,11 @@
 
 //Bring in dependencies
-var express = require("express");
-var mongoose = require("mongoose");
-var Workout = require("./Develop/models/workout")
+const express = require("express");
+const morgan = require("morgan");
+const mongoose = require("mongoose");
+const Workout = require("./Develop/models/workout")
 //Create PORT 
-var PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 8080;
 var fs = require("fs");
 var app = express();
 
@@ -24,5 +25,5 @@ app.use(require("./routes/api.js"));
 app.use(require("./routes/html-routes.js"));
 
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+  console.log(`App listening on port ${PORT}!`);
 });
