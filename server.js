@@ -2,6 +2,7 @@
 //Bring in dependencies
 var express = require("express");
 var mongoose = require("mongoose");
+var Workout = require("./Develop/models/workout")
 //Create PORT 
 var PORT = process.env.PORT || 3000;
 var fs = require("fs");
@@ -12,7 +13,7 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Workout", {
   useNewUrlParser: true,
   useFindAndModify: false,
   useUnifiedTopology: true 
