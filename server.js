@@ -3,7 +3,7 @@
 const express = require("express");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
-const Workout = require("./Develop/models/workout")
+const Workout = require("./models/workout")
 //Create PORT 
 var PORT = process.env.PORT || 8080;
 var fs = require("fs");
